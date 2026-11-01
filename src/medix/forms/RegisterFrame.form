@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="MediX – Create Account"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblHeading" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tabRegister" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnRegister" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblHeading" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="tabRegister" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRegister" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lblHeading">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create your MediX account"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JTabbedPane" name="tabRegister">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="tabRegisterStateChanged"/>
+      </Events>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pnlPatient">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Patient">
+                <Property name="tabTitle" type="java.lang.String" value="Patient"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblFullName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtFullName" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPatientEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPatientEmail" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPatientPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPatientPassword" alignment="0" pref="250" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblPatientPhone" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPatientPhone" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblArea" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cmbArea" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPatientConfirm" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPatientConfirm" alignment="0" pref="250" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lblPatientNote" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblFullName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPatientPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtFullName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPatientPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPatientEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblArea" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtPatientEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cmbArea" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPatientPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPatientConfirm" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtPatientPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPatientConfirm" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="lblPatientNote" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="16" pref="16" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblFullName">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Full name *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtFullName">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPatientPhone">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Phone *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPatientPhone">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPatientEmail">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Email *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPatientEmail">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblArea">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Area *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cmbArea">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;medix.model.Area&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPatientPassword">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="txtPatientPassword">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPatientConfirm">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Confirm password *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="txtPatientConfirm">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPatientNote">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;MediX uses your area only to sort pharmacies by distance.&lt;br&gt;It never stores your exact location.&lt;/html&gt;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="pnlPharmacy">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Pharmacy">
+                <Property name="tabTitle" type="java.lang.String" value="Pharmacy"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblPharmacyName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPharmacyName" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblOwnerName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtOwnerName" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPharmacyEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPharmacyEmail" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPharmacyPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPharmacyPassword" alignment="0" pref="250" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblLicenseNo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtLicenseNo" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPharmacyPhone" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPharmacyPhone" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblOpeningHours" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtOpeningHours" alignment="0" pref="250" max="32767" attributes="0"/>
+                                  <Component id="lblPharmacyConfirm" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPharmacyConfirm" alignment="0" pref="250" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lblAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="scrAddress" alignment="0" pref="520" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblLatitude" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtLatitude" alignment="0" pref="170" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblLongitude" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtLongitude" alignment="0" pref="170" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="btnFindFromAddress" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblLicenseFile" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtLicenseFile" pref="400" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnBrowse" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblPharmacyNote" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPharmacyName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblLicenseNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtPharmacyName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLicenseNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblOwnerName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPharmacyPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtOwnerName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPharmacyPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPharmacyEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblOpeningHours" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtPharmacyEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtOpeningHours" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPharmacyPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPharmacyConfirm" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtPharmacyPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPharmacyConfirm" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="lblAddress" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="scrAddress" min="-2" pref="48" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblLatitude" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblLongitude" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtLatitude" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLongitude" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnFindFromAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="lblLicenseFile" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtLicenseFile" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnBrowse" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="lblPharmacyNote" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="16" pref="16" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblPharmacyName">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pharmacy name *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPharmacyName">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblLicenseNo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drug license number *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLicenseNo">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblOwnerName">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Owner / pharmacist name *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtOwnerName">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPharmacyPhone">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Phone *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPharmacyPhone">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPharmacyEmail">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Email *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPharmacyEmail">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblOpeningHours">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Opening hours"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtOpeningHours">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="8:00 AM – 11:00 PM"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPharmacyPassword">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="txtPharmacyPassword">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPharmacyConfirm">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Confirm password *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="txtPharmacyConfirm">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblAddress">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Address *"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="scrAddress">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="txtAddress">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="lineWrap" type="boolean" value="true"/>
+                    <Property name="rows" type="int" value="2"/>
+                    <Property name="wrapStyleWord" type="boolean" value="true"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="lblLatitude">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Latitude"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLatitude">
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblLongitude">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Longitude"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLongitude">
+            </Component>
+            <Component class="javax.swing.JButton" name="btnFindFromAddress">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Find from address"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFindFromAddressActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblLicenseFile">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="License document (PDF / image) *"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtLicenseFile">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnBrowse">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Browse..."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBrowseActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblPharmacyNote">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;Your pharmacy stays hidden from patients until an admin&lt;br&gt;verifies your license.&lt;/html&gt;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="btnCancel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancel"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRegister">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Account"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisterActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

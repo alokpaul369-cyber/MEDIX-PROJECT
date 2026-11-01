@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="MediX" default="default" basedir=".">
+    <description>Builds, tests, and runs the project MediX.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+    <!--
+    package-fat: one runnable dist/MediX-all.jar with MediX and every library from lib/ inside
+    (JUnit is not included, it is only on the test classpath). Run "Clean and Build" first or let
+    this target build the normal jar. Also copies run.bat next to it.
+        ant package-fat
+        java -jar dist/MediX-all.jar
+    -->
+    <target name="package-fat" depends="jar" description="Build one runnable dist/MediX-all.jar with all libraries inside.">
+        <property name="fat.jar" value="${dist.dir}/MediX-all.jar"/>
+        <property name="fat.libs" value="${build.dir}/fat-libs.jar"/>
+        <!-- 1. every library jar from dist/lib merged into one temporary jar -->
+        <jar destfile="${fat.libs}" filesetmanifest="skip">
+            <zipgroupfileset dir="${dist.dir}/lib" includes="*.jar"/>
+        </jar>
+        <!-- 2. MediX classes + the libraries without their signatures, old manifests and Java 9+ class versions -->
+        <jar destfile="${fat.jar}" filesetmanifest="skip">
+            <fileset dir="${build.classes.dir}"/>
+            <zipfileset src="${fat.libs}"
+                        excludes="META-INF/MANIFEST.MF,META-INF/*.SF,META-INF/*.DSA,META-INF/*.RSA,META-INF/versions/**,module-info.class"/>
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+                <attribute name="Implementation-Title" value="MediX – Medicine Availability Finder"/>
+            </manifest>
+        </jar>
+        <delete file="${fat.libs}"/>
+        <copy file="run.bat" todir="${dist.dir}"/>
+        <echo message="Built ${fat.jar} – start it with: java -jar ${fat.jar} (or run.bat)"/>
+    </target>
+    <!--
+
+    There exist several targets which are by default empty and which can be
+    used for execution of your tasks. These targets are usually executed
+    before and after some main targets. They are:
+
+      -pre-init:                 called before initialization of project properties
+      -post-init:                called after initialization of project properties
+      -pre-compile:              called before javac compilation
+      -post-compile:             called after javac compilation
+      -pre-compile-single:       called before javac compilation of single file
+      -post-compile-single:      called after javac compilation of single file
+      -pre-compile-test:         called before javac compilation of JUnit tests
+      -post-compile-test:        called after javac compilation of JUnit tests
+      -pre-compile-test-single:  called before javac compilation of single JUnit test
+      -post-compile-test-single: called after javac compilation of single JUunit test
+      -pre-jar:                  called before JAR building
+      -post-jar:                 called after JAR building
+      -post-clean:               called after cleaning build products
+
+    (Targets beginning with '-' are not intended to be called on their own.)
+
+    Example of inserting an obfuscator after compilation could look like this:
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported
+    nbproject/build-impl.xml file.
+
+    -->
+</project>
